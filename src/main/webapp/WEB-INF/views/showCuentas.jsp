@@ -39,8 +39,8 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr>
-				<td><c:out value="${cuentas.head.codigoServicio}"></c:out></td>
+			<tr> 
+			<td><c:out value="${cuentas.head.codigoServicio}"></c:out></td>
 				<td><c:out value="${cuentas.head.fechaOperacion}"></c:out></td>
 				<td><c:out value="${cuentas.head.errorCode}"></c:out></td>
 				<td><c:out value="${cuentas.head.descripcionError}"></c:out></td>
@@ -63,7 +63,7 @@
 				<th>Propietario</th>
 				<th>Descripcion</th>
 				<th>Balance</th>
-				<th>Currency</th>
+				<th>Moneda</th>
 				<th>IBAN</th>
 			</tr>
 		</thead>

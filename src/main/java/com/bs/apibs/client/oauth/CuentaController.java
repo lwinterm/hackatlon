@@ -76,7 +76,7 @@ public class CuentaController {
 	@RequestMapping(value = "/cuentas/cuentasvista")
 	public ModelAndView getCuentasVistaUsuario(@RequestParam(value = "version")
 	String version,ModelMap map, HttpSession session, HttpServletRequest request, Principal principal) {
-		String UrlPosicionGlobal = entorno.getProperty(PropertiesUtil.RUTA_SERVIDOR) + "/ResourcesServerBS/oauthservices/"+version+"/cuentasvista/+CCC+/movimientos";
+		String UrlPosicionGlobal = entorno.getProperty(PropertiesUtil.RUTA_SERVIDOR) + "/ResourcesServerBS/oauthservices/"+version+"/cuentasvista/00810000000000000932/movimientos?fechaDesde=01-01-2014&fechaHasta=31-12-2014";
 
 		String mov = resourcesService.getPosicionGlobalContent(UrlPosicionGlobal);
 
@@ -105,7 +105,7 @@ public class CuentaController {
 	@RequestMapping(value = "/cuentas/tarjetas")
 	public ModelAndView getTarjetasUsuario(@RequestParam(value = "version")
 	String version,ModelMap map, HttpSession session, HttpServletRequest request, Principal principal) {
-		String UrlPosicionGlobal = entorno.getProperty(PropertiesUtil.RUTA_SERVIDOR) + "/ResourcesServerBS/oauthservices/"+version+"/tarjetas";
+		String UrlPosicionGlobal = entorno.getProperty(PropertiesUtil.RUTA_SERVIDOR) + "/ResourcesServerBS/oauthservices/"+version+"/tarjetas/4106000000000004/movimientos?order=";
 
 		String mov = resourcesService.getPosicionGlobalContent(UrlPosicionGlobal);
 
