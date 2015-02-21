@@ -93,7 +93,7 @@
 	<br />
 
 	<p>
-		<a href="<c:url value="/welcome" />">atr&aacute;s</a>
+		<a href="<c:url value="/welcome" />">atras </a>
 	</p>
 </body>
 </html>
