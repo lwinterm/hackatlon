@@ -1,0 +1,751 @@
+body {
+	border: none;
+	margin: 0;
+	padding: 0;
+	color: black;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 80%;
+	font-weight: normal;
+	text-align: left;
+	width: 100%;
+	display: none;
+}
+
+#miscellaneous {
+	background-color: #000000;
+	color: #FFFFFF;
+	height: 2em;
+}
+
+#miscellaneous * {
+	color: #FFFFFF;
+}
+
+#languages *{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.9em;
+	font-weight: normal;
+	color: #FFFFFF;
+}
+
+#miscellaneous a:hover {
+	color: #FFFFCC;
+}
+
+.liquid {
+	margin: 0 auto;
+	max-width: 995px;
+	text-align: left;
+	width: 100%;
+}
+
+.clear:after {
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+
+#telefonoCabecera {
+	background: url(../images/telHead.gif) no-repeat scroll 0 3px
+		rgba(0, 0, 0, 0);
+	display: block;
+	color: #FFFFFF;
+	padding-left: 25px;
+}
+
+#numTel{
+	font-size: 1.3em;
+	font-weight: bold;
+}
+
+#telefonoCabecera a{
+	font-size: 0.9em;
+	font-weight: normal;
+}
+
+#titleOperation {
+	color: #000000;
+	font-size: 1.4em;
+	margin-bottom: 5px;
+	padding-left: 8px;
+	width: 75%!important;
+	font-weight: bold;
+	height: 100%;
+}
+
+#telefonoCabecera * {
+	color: #FFFFFF;
+}
+
+h1.header {
+	margin: 0 0 0 0px;
+	padding-bottom: 0;
+	background-color: #009ace;
+	font-size: 16px;
+	text-align: left;
+}
+
+#div_all {
+	margin: 0px auto;
+	padding-bottom: 0px;
+	min-height: 416px;
+	position: relative;
+	width: 50%;
+	/* El tamaño de la imagen */
+	min-width: 460px;
+}
+
+#div_content {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#div_content_sup {
+	padding: 0;
+	margin: 0;
+	background-color: #c5ccd3;
+}
+
+p.sep {
+	padding: 0px;
+	margin: 0px;
+	font-size: 13px;
+}
+
+h2.title {
+	margin: 0;
+	padding-top: 9px;
+	padding-bottom: 12px;
+	padding-left: 50px;
+	position: relative;
+	background: rgb(109, 133, 163) url(../_img/iphone/bgHeader.png) repeat-x
+		top;
+	color: white;
+	font-size: 13px;
+	font-weight: bold;
+	text-shadow: #2d3642 0 -1px 0;
+	text-align: center;
+	vertical-align: middle;
+}
+
+h2.title a {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 7px;
+	left: 6px;
+	right: auto;
+	max-width: 55px;
+	overflow: hidden;
+	white-space: nowrap;
+	width: auto;
+	height: 30px;
+	background: none;
+	color: white;
+	font: bold 12px/30px Helvetica, Arial, sans-serif;
+	text-shadow: rgb(46, 55, 68) 0 -1px 0;
+	text-overflow: ellipsis;
+	text-decoration: none;
+	border-width: 0 8px 0 14px;
+	-webkit-border-image: url(../_img/iphone/backButton.png) 0 8 0 14;
+}
+
+#generalTitle {
+	padding-top: 15px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	background-color: white;
+	color: black;
+	font-size: 16px;
+	font-weight: normal;
+	border: 1px solid #B4B4B4;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+}
+
+ul li,ul li.noLink {
+	padding: 0;
+	list-style-type: none;
+	background-color: white;
+	background-image: url(../_img/iphone/chevron.gif);
+	background-position: right center;
+	background-repeat: no-repeat;
+	color: black;
+	border: 1px solid #B4B4B4;
+}
+
+ul li.noLink {
+	background-image: none;
+	padding-right: 5px;
+}
+
+li:first-child {
+	border-top: 0;
+	-webkit-border-top-left-radius: 8px;
+	-webkit-border-top-right-radius: 8px;
+}
+
+li:last-child {
+	-webkit-border-bottom-left-radius: 8px;
+	-webkit-border-bottom-right-radius: 8px;
+}
+
+ul li a,ul li p {
+	margin: 0px;
+	padding: 12px 10px 12px 10px;
+	display: block;
+	color: black;
+	font-size: 16px;
+	text-decoration: none;
+}
+
+ul.noArrow {
+	margin: 0;
+	padding: 0;
+	background-color: white;
+	color: black;
+	font-size: 16px;
+	font-weight: normal;
+	border: 1px solid #B4B4B4;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+}
+
+ul.noArrow li {
+	padding: 0;
+	list-style-type: none;
+	background-color: white;
+	background-image: none;
+	color: black;
+	border: 1px solid #B4B4B4;
+}
+
+ul.noArrow li:first-child {
+	padding: 0;
+	border-top: 0;
+	-webkit-border-top-left-radius: 8px;
+	-webkit-border-top-right-radius: 8px;
+}
+
+ul.noArrow li:last-child {
+	padding: 0;
+	-webkit-border-bottom-left-radius: 8px;
+	-webkit-border-bottom-right-radius: 8px;
+}
+
+ul.noArrow li a {
+	margin: 0px;
+	padding: 12px 10px 12px 10px;
+	white-space: nowrap;
+	overflow: hidden;
+	display: block;
+	color: black;
+	text-decoration: none;
+	text-overflow: ellipsis;
+}
+
+p.greenButton,p.greyButton {
+	margin-top: 15px;
+	margin-bottom: 0px;
+	width: 300px;
+	height: 56px;
+	background-image: url(../_img/iphone/greenButton.png);
+	text-align: center;
+}
+
+p.greyButton {
+	background-image: url(../_img/iphone/greyButton.png);
+}
+
+a.greenButton,a.greenButton:hover,a.greenButton:active,a.greenButton:visited,a.greyButton,a.greyButton:hover,a.greyButton:active,a.greyButton:visited
+	{
+	padding-top: 14px;
+	padding-bottom: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+	white-space: nowrap;
+	overflow: hidden;
+	display: block;
+	color: #FFFFFF;
+	font-size: 18px;
+	font-weight: bold;
+	text-decoration: none;
+	text-overflow: ellipsis;
+	text-shadow: #2d3642 0 -1px 0;
+}
+
+a.blueSmallButton,a.blueSmallButton:hover,a.blueSmallButton:active,a.blueSmallButton:visited,a.greySmallButton,a.greySmallButton:hover,a.greySmallButton:active,a.greySmallButton:visited
+	{
+	padding-top: 5px;
+	padding-bottom: 0px;
+	white-space: nowrap;
+	overflow: hidden;
+	display: inline-block;
+	width: 114px;
+	height: 30px;
+	background-image: url(../_img/iphone/blueActionButton.png);
+	background-repeat: no-repeat;
+	color: #FFFFFF;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	text-overflow: ellipsis;
+	text-shadow: #2d3642 0 -1px 0;
+}
+
+a.greySmallButton,a.greySmallButton:hover,a.greySmallButton:active,a.greySmallButton:visited
+	{
+	background-image: url(../_img/iphone/greyActionButton.png);
+}
+
+#FOOTER_NAVIGATION {
+	margin: 0 0 0 0px;
+	padding-top: 2px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 2px;
+	color: black;
+	text-align: left;
+}
+
+#FOOTER_NAVIGATION table {
+	margin: 0;
+	padding: 0;
+}
+
+#FOOTER_NAVIGATION table tr td a,#FOOTER_NAVIGATION table tr td a:hover,#FOOTER_NAVIGATION table tr td a:visited,#FOOTER_NAVIGATION table tr td a:active
+	{
+	padding-top: 7px;
+	padding-bottom: 3px;
+	display: block;
+	color: black;
+	font-size: 16px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#copyright {
+	margin: 0 0 0 0px;
+	clear: both;
+	background-color: white;
+	color: black;
+	font-size: 14px;
+	font-weight: normal;
+}
+
+.UpTrend {
+	color: black;
+}
+
+.DownTrend {
+	color: red;
+}
+
+.EqualTrend {
+	color: black;
+}
+
+#GeneralContentBoxWithMarginTop {
+	margin-top: 1.6%;
+	padding: 5px 5px 5px 5px;
+	background-color: white;
+	color: black;
+	font-size: 13px;
+	font-weight: normal;
+	border: 1px solid #B4B4B4;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+}
+
+#GeneralContentBox,#GeneralContentBoxBigText {
+	margin: 0;
+	padding: 10px 10px 10px 10px;
+	background-color: white;
+	color: black;
+	font-size: 14px;
+	font-weight: normal;
+	border: 1px solid #B4B4B4;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+}
+
+#GeneralContentBoxBigText {
+	font-size: 16px;
+	font-weight: normal;
+}
+
+#GeneralContentBoxNoSidePadding {
+	margin: 0;
+	padding: 10px 1px 10px 1px;
+	background-color: white;
+	color: black;
+	font-size: 14px;
+	font-weight: normal;
+	border: 1px solid #B4B4B4;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+}
+
+#smallrightText {
+	font-size: 13px;
+	font-weight: normal;
+	text-align: right;
+}
+
+ul.none {
+	margin: 0;
+	margin-left: 20px;
+	padding: 0;
+	padding-left: 10px;
+	background-color: white;
+	color: black;
+	font-size: 16px;
+	font-weight: normal;
+	border: none;
+}
+
+ul.none li.none {
+	padding: 0px;
+	list-style-type: disc;
+	background-color: white;
+	color: black;
+	font-size: 14px;
+	font-weight: normal;
+	background-image: none;
+	background-position: right center;
+	background-repeat: no-repeat;
+	border: none;
+}
+
+.requiredFieldsText {
+	font-size: 13px;
+}
+
+#desc_acces {
+	padding-bottom: 10px;
+	color: red;
+	font-size: 13px;
+	font-weight: normal;
+}
+
+#desc_acces a,#desc_acces a:hover,#desc_acces a:visited,#desc_acces a:active
+	{
+	color: blue;
+	font-size: 13px;
+	font-weight: normal;
+}
+
+#desc_acces2 {
+	padding-bottom: 10px;
+	color: red;
+	font-size: 13px;
+	font-weight: normal;
+}
+
+#desc_acces2 a,#desc_acces2 a:hover,#desc_acces2 a:visited,#desc_acces2 a:active
+	{
+	color: white;
+	font-size: 13px;
+	font-weight: normal;
+}
+
+#GeneralContenth1 {
+	font-weight: bold;
+	padding-top: 15px;
+	padding-bottom: 3px;
+}
+
+#GeneralContenth1Child {
+	padding-left: 5px;
+}
+
+.boldText {
+	font-weight: bold
+}
+
+.errorMessage {
+	color: red
+}
+
+.registerTextInput {
+	margin: 0;
+}
+
+.linkWithoutStyle {
+	text-decoration: none;
+	color: black
+}
+
+.generalContentTable {
+	width: 100%;
+}
+
+.contentTable {
+	width: 100%;
+	table-layout: fixed;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.hidden {
+	display: none;
+}
+
+.ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 100%;
+}
+
+.columnTitle {
+	width: 45%;
+	overflow: hidden;
+	word-wrap: break-word;
+}
+
+.columnContent {
+	width: 55%;
+	overflow: hidden;
+	word-wrap: break-word;
+	/* Use this for ellipsis
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;*/
+	text-align: right;
+}
+
+.generalContentBox {
+	margin: 0;
+	padding: 10px 10px 10px 10px;
+	background-color: white;
+	color: black;
+	font-size: 14px;
+	font-weight: normal;
+	border: 1px solid #B4B4B4;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+}
+
+.generalContentBoxNoSidePadding {
+	margin: 0;
+	padding: 10px 1px 10px 1px;
+	background-color: white;
+	color: black;
+	font-size: 14px;
+	font-weight: normal;
+	border: 1px solid #B4B4B4;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+}
+
+.generalContentBoxPaddingBackground {
+	margin: 0;
+	padding: 8px;
+	color: black;
+	font-weight: normal;
+	background-color: #F7F7F7;
+	border: 1px solid #B4B4B4;
+	margin-bottom: 14px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+}
+
+.textoFirma{
+	color: #0099CC;
+	font-weight: bold;
+}
+
+.noBackgroundColor{
+	background-color: white;
+	border: none;
+}
+
+.generalTitle {
+	padding-top: 15px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.leftAligned {
+	text-align: left;
+}
+
+.centerAligned {
+	text-align: center;
+}
+
+.rightAligned {
+	text-align: right;
+}
+
+.centeredChevron {
+	padding-left: 0.8em;
+	vertical-align: middle;
+}
+
+.fiveColumns {
+	width: 25%;
+}
+
+.fourColumns {
+	width: 20%;
+}
+
+/*INPUT.btn {font-family:Arial; font-size: 12px;}*/
+
+/*button.submitButton {
+	padding-top: 5px;
+	width: 114px;
+	height: 30px;
+	background-color: white;
+	background-image: url(../images/blueActionButton.png);
+	color: white;
+	font-size: 16px;
+	font-weight: bold;
+	text-shadow: #2d3642 0 -1px 0;
+	border: 0;
+}*/
+button.submitButton {
+
+	font-family:Arial;
+	font-size: 12px;
+	color: black;
+	font-weight: normal;
+	padding: 1px 2px;
+}
+
+
+#tablaBotonera {
+	tbody tr: nth-child(even) td, tbody tr.even td{background:#FFFFFF;
+}
+
+}
+#panelBotonera button.botonNumerico {
+	-moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #ffffff;
+	box-shadow: inset 0px 1px 0px 0px #ffffff;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed
+		), color-stop(1, #dfdfdf));
+	background: -moz-linear-gradient(center top, #ededed 5%, #dfdfdf 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed',
+		endColorstr='#dfdfdf');
+	background-color: #ededed;
+	-webkit-border-top-left-radius: 0px;
+	-moz-border-radius-topleft: 0px;
+	border-top-left-radius: 0px;
+	-webkit-border-top-right-radius: 0px;
+	-moz-border-radius-topright: 0px;
+	border-top-right-radius: 0px;
+	-webkit-border-bottom-right-radius: 0px;
+	-moz-border-radius-bottomright: 0px;
+	border-bottom-right-radius: 0px;
+	-webkit-border-bottom-left-radius: 0px;
+	-moz-border-radius-bottomleft: 0px;
+	border-bottom-left-radius: 0px;
+	text-indent: 0;
+	border: 1px solid #dcdcdc;
+	display: inline-block;
+	color: #777777;
+	font-family: Arial;
+	font-size: 15px;
+	font-weight: bold;
+	font-style: normal;
+	height: 30px;
+	line-height: 24px;
+	width: 32px;
+	text-decoration: none;
+	text-align: center;
+	text-shadow: 1px 1px 0px #ffffff;
+	margin-bottom: 0;
+	vertical-align: middle;
+}
+
+#panelBotonera button.botonNumerico:hover {
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dfdfdf
+		), color-stop(1, #ededed));
+	background: -moz-linear-gradient(center top, #dfdfdf 5%, #ededed 100%);
+	filter: progid:DXpaImageTransform.Microsoft.gradient(startColorstr='#dfdfdf',
+		endColorstr='#ededed');
+	background-color: #dfdfdf;
+}
+
+#panelBotonera button.botonNumerico:active {
+	position: relative;
+	top: 1px;
+}
+
+#panelBotonera button.botonNumerico:focus {
+	outline: 0 !important;
+}
+
+#panelBotonera button.botonBorrar {
+	-moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #ffffff;
+	box-shadow: inset 0px 1px 0px 0px #ffffff;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed
+		), color-stop(1, #dfdfdf));
+	background: -moz-linear-gradient(center top, #ededed 5%, #dfdfdf 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed',
+		endColorstr='#dfdfdf');
+	background-color: #ededed;
+	text-indent: 0;
+	border: 1px solid #dcdcdc;
+	display: inline-block;
+	color: #777777;
+	font-family: Arial;
+	font-size: 15px;
+	font-weight: bold;
+	font-style: normal;
+	height: 30px;
+	line-height: 24px;
+	width: 73px;
+	text-decoration: none;
+	text-align: center;
+	text-shadow: 1px 1px 0px #ffffff;
+	margin: 0;
+	vertical-align: middle;
+}
+
+#panelBotonera button.botonBorrar:hover {
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dfdfdf
+		), color-stop(1, #ededed));
+	background: -moz-linear-gradient(center top, #dfdfdf 5%, #ededed 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf',
+		endColorstr='#ededed');
+	background-color: #dfdfdf;
+}
+
+#panelBotonera button.botonBorrar:active {
+	position: relative;
+	top: 1px;
+}
+
+#panelBotonera button.botonBorrar:focus {
+	outline: 0 !important;
+}
+
+#panelBotonera div {
+	margin-top: 4px;
+	vertical-align: middle;
+}
+
+.marginTop {
+	margin-top: 5px;
+}

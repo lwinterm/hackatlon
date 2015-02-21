@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc" xmlns:oauth2="http://www.springframework.org/schema/security/oauth2"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:security="http://www.springframework.org/schema/security"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
+		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.1.xsd
+		http://www.springframework.org/schema/security/oauth2 http://www.springframework.org/schema/security/spring-security-oauth2.xsd
+		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd">
+
+	<!-- Propiedades del entorno para poder configurar correctamente el security -->
+	<bean id="applicationProperties"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location" value="classpath:entornoCliente.properties" />
+	</bean>
+
+	<security:http auto-config="true"
+		authentication-manager-ref="manager">
+		<security:intercept-url pattern="/login"
+			access="IS_AUTHENTICATED_ANONYMOUSLY" />
+		<security:intercept-url pattern="/logout"
+			access="IS_AUTHENTICATED_ANONYMOUSLY" />
+		<security:intercept-url pattern="/accessdenied"
+			access="IS_AUTHENTICATED_ANONYMOUSLY" />
+		<security:intercept-url pattern="/**" access="ROLE_USER" />
+		<security:form-login login-page="/login"
+			default-target-url="/welcome" authentication-failure-url="/loginfailed" />
+		<security:logout logout-success-url="/logout" />
+		<security:custom-filter ref="oauth2ClientFilter"
+			after="EXCEPTION_TRANSLATION_FILTER" />
+	</security:http>
+
+	<security:authentication-manager id="manager">
+		<security:authentication-provider>
+			<security:user-service>
+				<security:user name="user_01" password="password"
+					authorities="ROLE_USER" />
+			</security:user-service>
+		</security:authentication-provider>
+	</security:authentication-manager>
+
+	<!--apply the oauth client context -->
+	<oauth2:client id="oauth2ClientFilter" />
+
+	<oauth2:resource id="resourceServicios" type="authorization_code"
+		client-id="${clientId}" access-token-uri="${rutaServidor}/AuthServerBS/oauth/token"
+		user-authorization-uri="${rutaServidor}/AuthServerBS/oauth/authorize"
+		scope="${scopes}" client-secret="${clientSecret}" />
+
+	<bean id="accessTokenProviderChain"
+		class="org.springframework.security.oauth2.client.token.AccessTokenProviderChain">
+		<constructor-arg>
+			<list>
+				<!-- Lista de token provider que va a utilizar el cliente -->
+				<!-- <ref bean="clientCredentialsAccessTokenProvider"/> -->
+				<!-- <ref bean="resourceOwnerPasswordAccessTokenProvider"/> -->
+				<!-- <ref bean="implicitAccessTokenProvider"/> -->
+				<ref bean="authorizationCodeAccessTokenProvider" />
+			</list>
+		</constructor-arg>
+	</bean>
+
+	<bean id="clientCredentialsAccessTokenProvider"
+		class="org.springframework.security.oauth2.client.token.grant.client.ClientCredentialsAccessTokenProvider" />
+
+	<bean id="resourceOwnerPasswordAccessTokenProvider"
+		class="org.springframework.security.oauth2.client.token.grant.password.ResourceOwnerPasswordAccessTokenProvider" />
+
+	<bean id="implicitAccessTokenProvider"
+		class="org.springframework.security.oauth2.client.token.grant.implicit.ImplicitAccessTokenProvider" />
+
+	<bean id="authorizationCodeAccessTokenProvider"
+		class="org.springframework.security.oauth2.client.token.grant.code.AuthorizationCodeAccessTokenProvider">
+		<property name="stateKeyGenerator" ref="defaultStateKeyGenerator" />
+	</bean>
+
+	<bean id="defaultStateKeyGenerator"
+		class="com.bs.apibs.client.oauth.impl.ApiBsDefaultStateKeyGenerator">
+		<property name="generator" ref="generator" />
+	</bean>
+
+	<bean id="generator"
+		class="org.springframework.security.oauth2.common.util.RandomValueStringGenerator">
+		<property name="length" value="${parameters.state.length}" />
+	</bean>
+
+	<bean id="resourcesService" class="com.bs.apibs.client.oauth.ResourcesServiceImpl">
+		<!--
+			<property name="movURL"
+			value="${rutaServidor}/ResourcesServerBS/rest/servicio" />
+
+			El restTemplate es una unidad que gestiona las credenciales y el consumo de recursos oauth
+			para un determinado EndPoint ( por ejemplo, BS ). Con este restTemplate podríamos invocar
+			distintos recursos de BS por ejemplo en los que solo cambioa la URL de los mismos.
+		 -->
+		<property name="restTemplate">
+			<oauth2:rest-template resource="resourceServicios"
+				access-token-provider="accessTokenProviderChain" />
+		</property>
+	</bean>
+
+	<bean
+		class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:entornoCliente.properties</value>
+			</list>
+		</property>
+	</bean>
+
+</beans>
