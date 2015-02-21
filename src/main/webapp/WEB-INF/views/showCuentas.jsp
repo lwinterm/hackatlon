@@ -79,14 +79,14 @@
 					<td>${cuenta.balance}</td>
 					<td>${cuenta.currency}</td>
 					<td>${cuenta.iban}</td>
-				</tr> --%>
+				</tr>  --%>
 				<tr>
-					<td>${cuenta.numeroProducto}</td>
-					<td>${cuenta.numeroProductoCodificado}</td>
-					<td>${cuenta.producto}</td>
-					<td>${cuenta.usuario}</td>
-					<td>${cuenta.propietario}</td>
-				</tr>
+					<td>${cuenta.fechaOperacion}</td>
+					<td>${cuenta.importe}</td>
+					<td>${cuenta.saldo}</td>
+					<td>${cuenta.codigoConcepto}</td>
+					<td>${cuenta.concepto}</td>
+				</tr> 
 			</c:forEach>
 		</tbody>
 	</table>

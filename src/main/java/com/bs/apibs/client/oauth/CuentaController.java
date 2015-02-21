@@ -23,6 +23,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.bs.apibs.client.model.Cuenta;
+import com.bs.apibs.client.model.DetalleCuenta;
 import com.bs.apibs.client.remote.ServicioOauthResponse;
 import com.bs.apibs.client.utils.PropertiesUtil;
 import com.fasterxml.jackson.core.JsonParseException;
@@ -76,16 +77,16 @@ public class CuentaController {
 	@RequestMapping(value = "/cuentas/cuentasvista")
 	public ModelAndView getCuentasVistaUsuario(@RequestParam(value = "version")
 	String version,ModelMap map, HttpSession session, HttpServletRequest request, Principal principal) {
-		String UrlPosicionGlobal = entorno.getProperty(PropertiesUtil.RUTA_SERVIDOR) + "/ResourcesServerBS/oauthservices/"+version+"/cuentasvista/00810000000000000932/movimientos?fechaDesde=01-01-2014&fechaHasta=31-12-2014";
+		String UrlPosicionGlobal = entorno.getProperty(PropertiesUtil.RUTA_SERVIDOR) + "/ResourcesServerBS/oauthservices/"+version+"/cuentasvista/00810000000000000929/movimientos?fechaDesde=16-01-2014&fechaHasta=15-10-2014";
 
 		String mov = resourcesService.getPosicionGlobalContent(UrlPosicionGlobal);
 
-		ServicioOauthResponse<List<Cuenta>> json = null;
+		ServicioOauthResponse<List<DetalleCuenta>> json = null;
 
 		ObjectMapper mapper = new ObjectMapper();
 
 		try {
-			json = mapper.readValue(mov, new TypeReference<ServicioOauthResponse<List<Cuenta>>>() {
+			json = mapper.readValue(mov, new TypeReference<ServicioOauthResponse<List<DetalleCuenta>>>() {
 				});
 		} catch (JsonParseException e) {
 			e.printStackTrace();
