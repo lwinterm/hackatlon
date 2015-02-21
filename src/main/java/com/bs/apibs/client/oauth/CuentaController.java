@@ -105,7 +105,7 @@ public class CuentaController {
 	@RequestMapping(value = "/cuentas/tarjetas")
 	public ModelAndView getTarjetasUsuario(@RequestParam(value = "version")
 	String version,ModelMap map, HttpSession session, HttpServletRequest request, Principal principal) {
-		String UrlPosicionGlobal = entorno.getProperty(PropertiesUtil.RUTA_SERVIDOR) + "/ResourcesServerBS/oauthservices/"+version+"/tarjetas/4106000000000004/movimientos?order=";
+		String UrlPosicionGlobal = entorno.getProperty(PropertiesUtil.RUTA_SERVIDOR) + "/ResourcesServerBS/oauthservices/"+version+"/tarjetas/";
 
 		String mov = resourcesService.getPosicionGlobalContent(UrlPosicionGlobal);
 

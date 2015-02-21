@@ -40,7 +40,7 @@
 		</thead>
 		<tbody>
 			<tr> 
-			<td><c:out value="${cuentas.head.codigoServicio}"></c:out></td>
+				<td><c:out value="${cuentas.head.codigoServicio}"></c:out></td>
 				<td><c:out value="${cuentas.head.fechaOperacion}"></c:out></td>
 				<td><c:out value="${cuentas.head.errorCode}"></c:out></td>
 				<td><c:out value="${cuentas.head.descripcionError}"></c:out></td>
@@ -69,7 +69,7 @@
 		</thead>
 		<tbody>
 			<c:forEach items="${cuentas.data}" var="cuenta" varStatus="status">
-				<tr>
+			<%-- 	<tr>
 					<td>${cuenta.numeroProducto}</td>
 					<td>${cuenta.numeroProductoCodificado}</td>
 					<td>${cuenta.producto}</td>
@@ -79,6 +79,13 @@
 					<td>${cuenta.balance}</td>
 					<td>${cuenta.currency}</td>
 					<td>${cuenta.iban}</td>
+				</tr> --%>
+				<tr>
+					<td>${cuenta.numeroProducto}</td>
+					<td>${cuenta.numeroProductoCodificado}</td>
+					<td>${cuenta.producto}</td>
+					<td>${cuenta.usuario}</td>
+					<td>${cuenta.propietario}</td>
 				</tr>
 			</c:forEach>
 		</tbody>
