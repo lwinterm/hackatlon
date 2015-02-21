@@ -76,7 +76,7 @@ public class CuentaController {
 	@RequestMapping(value = "/cuentas/cuentasvista")
 	public ModelAndView getCuentasVistaUsuario(@RequestParam(value = "version")
 	String version,ModelMap map, HttpSession session, HttpServletRequest request, Principal principal) {
-		String UrlPosicionGlobal = entorno.getProperty(PropertiesUtil.RUTA_SERVIDOR) + "/ResourcesServerBS/oauthservices/"+version+"/cuentasvista";
+		String UrlPosicionGlobal = entorno.getProperty(PropertiesUtil.RUTA_SERVIDOR) + "/ResourcesServerBS/oauthservices/"+version+"/cuentasvista/+CCC+/movimientos";
 
 		String mov = resourcesService.getPosicionGlobalContent(UrlPosicionGlobal);
 
